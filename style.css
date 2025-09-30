@@ -1,0 +1,443 @@
+/* GERAIS E RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS DE COR */
+:root {
+    --color-bg: #FFFAFB; /* Fundo muito suave */
+    --color-text-primary: #5F4B66; /* Ameixa suave */
+    --color-accent: #F0EBE3; /* Bege/Areia */
+    --color-feminine: #D4AFB9; /* Rosa empoeirado/Malva */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg); /* Fundo garantido */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografia Refinada */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-feminine);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+header {
+    background: var(--color-bg);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-accent);
+}
+
+/* CABEÇALHO E NAVEGAÇÃO REFINADOS */
+header {
+    background: var(--color-bg);
+    padding: 20px 0; /* Um pouco mais de padding para respiro */
+    border-bottom: 1px solid var(--color-accent); /* Borda sutil em areia */
+}
+
+header .container {
+    /* Centraliza a lista de links na página */
+    display: flex; 
+    justify-content: center; /* ALINHAMENTO PRINCIPAL */
+    align-items: center;
+}
+
+/* Removemos a estilização .logo, pois ela foi retirada no HTML */
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Garante que os itens fiquem em HORIZONTAL */
+    gap: 40px; /* Mais espaço entre os links */
+}
+
+.nav-links a {
+    font-weight: 400;
+    text-transform: uppercase; /* Volta a uppercase para mais clareza */
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent; /* Adiciona uma linha transparente sutil */
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-feminine);
+    border-bottom: 1px solid var(--color-feminine); /* Linha rosa no hover */
+}
+
+/* ============================== */
+/* SEÇÃO HERO/INTRODUÇÃO - NOVO   */
+/* ============================== */
+.hero {
+    padding: 100px 0;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Layout assimétrico */
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-texto {
+    padding-left: 20px;
+}
+
+.hero-imagem {
+    width: 100%;
+    height: 450px;
+    background-color: var(--color-accent);
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    /* background-image: url('sua-foto-elegante.jpg'); */
+}
+
+.hero .subtitulo {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text-primary);
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-size: 4.5rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+/* SEÇÃO TECNOLOGIAS (SKILLS) */
+.secao-tecnologias {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--color-bg); /* Fundo claro para diferenciar */
+}
+
+.secao-tecnologias h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.subtitulo-skills {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    color: #8C7B90;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.grid-tecnologias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Garante que os itens quebrem a linha se necessário */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px; /* Largura fixa para manter o minimalismo */
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item i {
+    font-size: 3.5rem;
+    color: var(--color-text-primary); /* Ameixa suave */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.skill-item span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+/* Efeito de hover elegante e delicado */
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-item:hover i {
+    color: var(--color-feminine); /* Rosa empoeirado no hover */
+}
+
+.divisor {
+    margin: 25px 0 30px 0;
+    width: 60px;
+    height: 1px; 
+    background-color: var(--color-feminine);
+}
+
+.especialidade {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-feminine);
+    margin-bottom: 20px;
+}
+
+.descricao {
+    font-size: 1.1rem;
+    max-width: none;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.hero-texto .btn-primary {
+    margin-top: 10px;
+}
+
+/* BOTÕES */
+.btn-primary {
+    padding: 14px 35px;
+    background-color: transparent;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 0;
+    border: 1px solid var(--color-text-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-feminine);
+    border-color: var(--color-feminine);
+    color: var(--color-bg);
+}
+
+/* ============================== */
+/* SEÇÃO PROJETOS - NOVO          */
+/* ============================== */
+.secao-projetos {
+    padding: 100px 0;
+    background-color: var(--color-accent);
+}
+
+.secao-projetos h3 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.projeto-card {
+    height: 350px;
+    background-color: var(--color-bg); 
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s ease;
+    border: 1px solid var(--color-accent);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    
+    background-image: url('placeholder-projeto.jpg'); /* Trocar */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Detalhes do Projeto */
+.detalhes-projeto {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 3px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.projeto-card:hover .detalhes-projeto {
+    transform: translateY(0);
+}
+
+.detalhes-projeto h4 {
+    color: var(--color-text-primary);
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.detalhes-projeto p {
+    color: #8C7B90;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+    border: 1px solid var(--color-feminine);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* SEÇÃO REDES SOCIAIS (CHAMADA DE AÇÃO) */
+.secao-social {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--color-accent); /* Fundo Bege suave */
+}
+
+.secao-social h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.secao-social p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: var(--color-text-primary);
+}
+
+.redes-sociais-destaque {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    border: 1px solid var(--color-text-primary);
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 50px; /* Borda arredondada para um visual mais suave */
+    transition: all 0.3s ease;
+}
+
+.social-btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Efeito de hover feminino e elegante */
+.social-btn:hover {
+    background-color: var(--color-feminine);
+    border-color: var(--color-feminine);
+    color: var(--color-bg); /* Texto claro no hover */
+}
+
+/* ============================== */
+/* RODAPÉ                         */
+/* ============================== */
+footer {
+    background-color: var(--color-text-primary);
+    padding: 70px 0 30px 0;
+    color: var(--color-accent);
+}
+
+footer h3 {
+    color: var(--color-bg);
+    font-weight: 400;
+}
+
+.email-contato {
+    color: var(--color-bg);
+}
+
+.email-contato:hover {
+    color: var(--color-feminine);
+    border-bottom: 2px solid var(--color-feminine);
+}
+
+.redes-sociais a {
+    color: var(--color-accent);
+}
+
+.redes-sociais a:hover {
+    color: var(--color-feminine);
+}
+
+.copy {
+    color: var(--color-accent);
+}
+
+/* ESTILIZAÇÃO PARA PROJETOS FUTUROS (Mais Suave e Delicado) */
+.projeto-futuro {
+    /* Fundo mais claro e suave, sem imagem */
+    background-color: var(--color-accent); /* Bege/Areia */
+    border: 1px dashed var(--color-feminine); /* Borda tracejada e delicada */
+    box-shadow: none; /* Remove a sombra padrão */
+    opacity: 0.8; /* Um pouco mais transparente para dar a sensação de "futuro" */
+}
+
+.projeto-futuro:hover {
+    transform: translateY(-5px); /* Efeito de hover mais sutil */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Garante que o texto deslize para cima, mesmo sem imagem */
+.projeto-futuro .detalhes-projeto {
+    background-color: var(--color-bg); 
+    border-top: 1px solid var(--color-accent);
+    text-align: center;
+}
+
+.projeto-futuro h4 {
+    color: var(--color-feminine);
+    font-style: italic;
+}
+
+.projeto-futuro p {
+    margin-bottom: 5px;
+}
+
+.status {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--color-text-primary);
+    background-color: var(--color-accent);
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Remove o botão 'Ver Detalhes' dos projetos futuros */
+.projeto-futuro .btn-secundario {
+    display: none;
+}
