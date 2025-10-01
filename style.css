@@ -108,17 +108,15 @@ header .container {
 
 /* CORREÇÃO AQUI */
 .hero-imagem {
-    width: 100%;
+    width: 80%;
     height: 450px; /* CORRIGIDO: de '450ph' (unidade inválida) para '450px' */
-    background-color: var(--color-accent);
     border-radius: 5px;
-    /* As propriedades background-* não são mais necessárias, pois estamos usando a tag <img> */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    /* As propriedades background-* não são mais necessárias, pois estamos usando a tag <img> */   
 }
 
 /* NOVA REGRA PARA DIMENSIONAR A IMAGEM DENTRO DO CONTÊINER */
 .hero-imagem img {
-    width: 100%;
+    width: 113%;
     height: 100%;
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer (cortando se necessário) */
     border-radius: 5px; /* Mantém as bordas arredondadas na imagem */
@@ -276,7 +274,7 @@ header .container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 20px;
+    padding: 10px;
     
     background-image: url('placeholder-projeto.jpg'); /* Trocar */
     background-size: cover;
