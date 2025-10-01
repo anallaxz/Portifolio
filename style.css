@@ -89,7 +89,7 @@ header .container {
 }
 
 /* ============================== */
-/* SEÇÃO HERO/INTRODUÇÃO - NOVO   */
+/* SEÇÃO HERO/INTRODUÇÃO - NOVO   */
 /* ============================== */
 .hero {
     padding: 100px 0;
@@ -106,15 +106,22 @@ header .container {
     padding-left: 20px;
 }
 
+/* CORREÇÃO AQUI */
 .hero-imagem {
     width: 100%;
-    height: 450px;
+    height: 450px; /* CORRIGIDO: de '450ph' (unidade inválida) para '450px' */
     background-color: var(--color-accent);
     border-radius: 5px;
-    background-size: cover;
-    background-position: center;
+    /* As propriedades background-* não são mais necessárias, pois estamos usando a tag <img> */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-    /* background-image: url('sua-foto-elegante.jpg'); */
+}
+
+/* NOVA REGRA PARA DIMENSIONAR A IMAGEM DENTRO DO CONTÊINER */
+.hero-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer (cortando se necessário) */
+    border-radius: 5px; /* Mantém as bordas arredondadas na imagem */
 }
 
 .hero .subtitulo {
@@ -236,7 +243,7 @@ header .container {
 }
 
 /* ============================== */
-/* SEÇÃO PROJETOS - NOVO          */
+/* SEÇÃO PROJETOS - NOVO          */
 /* ============================== */
 .secao-projetos {
     padding: 100px 0;
@@ -362,7 +369,7 @@ header .container {
 }
 
 /* ============================== */
-/* RODAPÉ                         */
+/* RODAPÉ                         */
 /* ============================== */
 footer {
     background-color: var(--color-text-primary);
